@@ -100,9 +100,9 @@ Automate backup using AWS Backup
 Use S3 for additional backup storage
 Implement multi-region active-active setup
 Add monitoring with CloudWatch
+
 👨‍💻 Author
 
 Harshavardhan
 BCA Student | Aspiring Cloud & DevOps Engineer
 
-## 🏗️ Architecture Diagram
