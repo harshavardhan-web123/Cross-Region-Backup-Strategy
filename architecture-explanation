@@ -1,0 +1,35 @@
+🔷 Explanation of Architecture
+🔹 1. Region A (Primary Region – Mumbai)
+Main application runs here
+EC2 instance hosts the web server (Apache)
+Root EBS volume stores OS + application
+🔹 2. EBS Volume
+Attached storage for EC2
+Contains application files and configurations
+🔹 3. EBS Snapshot
+Backup of the EBS volume
+Captures complete data state
+🔹 4. Cross-Region Copy
+Snapshot is copied from:
+Region A → Region B
+Ensures disaster recovery capability
+🔹 5. Region B (Backup Region – Ohio)
+Used for recovery during failure
+Stores copied snapshot
+🔹 6. Restore Process
+Create new EBS volume from snapshot
+Attach volume to new EC2 instance
+🔹 7. EC2 in Region B
+New instance created
+Restored volume attached
+Apache server started
+🔹 8. Application Recovery
+Application becomes live again
+Ensures business continuity
+🔥 Key Features of This Architecture
+
+✅ Cross-region disaster recovery
+✅ Data backup and restore
+✅ High reliability
+✅ Minimal downtime
+✅ Secure data replication
