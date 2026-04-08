@@ -1,0 +1,33 @@
+        Region A (Primary - ap-south-1 Mumbai)
+        ─────────────────────────────────────
+
+            EC2 Instance (Web Server)
+                    │
+                    ▼
+             EBS Volume (Root)
+                    │
+                    ▼
+              EBS Snapshot
+                    │
+                    ▼
+        Copy Snapshot to Region B
+                    │
+                    ▼
+        ─────────────────────────────────────
+
+        Region B (Backup - us-east-2 Ohio)
+        ─────────────────────────────────────
+
+              Copied Snapshot
+                    │
+                    ▼
+              New EBS Volume
+                    │
+                    ▼
+            EC2 Instance (Recovery)
+                    │
+                    ▼
+            Restored Web Application
+                    │
+                    ▼
+                 End Users
